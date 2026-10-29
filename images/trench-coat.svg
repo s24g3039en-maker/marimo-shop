@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#EFE9DE" />
+    </linearGradient>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#3D382E" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad4)" />
+  <g filter="url(#shadow4)">
+    <!-- Coat Body -->
+    <path d="M150 90 L85 160 L110 185 L145 155 L135 340 L265 340 L255 155 L290 185 L315 160 L250 90 C235 105 218 110 200 110 C182 110 165 105 150 90 Z" fill="#D8C2A7" stroke="#BAA082" stroke-width="2" />
+    <!-- Big Lapels -->
+    <path d="M165 95 L140 150 L190 170 L200 130 Z" fill="#CBB296" stroke="#AA8F71" stroke-width="1.5" />
+    <path d="M235 95 L260 150 L210 170 L200 130 Z" fill="#CBB296" stroke="#AA8F71" stroke-width="1.5" />
+    <!-- Overlap & Double Breasted Buttons -->
+    <line x1="185" y1="170" x2="175" y2="340" stroke="#B39879" stroke-width="1.5" />
+    <circle cx="175" cy="185" r="4" fill="#5A4738" />
+    <circle cx="215" cy="185" r="4" fill="#5A4738" />
+    <circle cx="173" cy="225" r="4" fill="#5A4738" />
+    <circle cx="217" cy="225" r="4" fill="#5A4738" />
+    <circle cx="170" cy="265" r="4" fill="#5A4738" />
+    <circle cx="219" cy="265" r="4" fill="#5A4738" />
+    <!-- Belt with buckle -->
+    <rect x="133" y="218" width="134" height="15" rx="3" fill="#BFA78C" stroke="#A1866B" stroke-width="1.5" />
+    <rect x="190" y="214" width="20" height="23" rx="3" fill="none" stroke="#685544" stroke-width="2" />
+    <line x1="200" y1="214" x2="200" y2="237" stroke="#685544" stroke-width="2" />
+  </g>
+</svg>

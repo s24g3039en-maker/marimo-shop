@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF9" />
+      <stop offset="100%" stop-color="#F4ECE1" />
+    </linearGradient>
+    <filter id="shadow8" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4A3423" flood-opacity="0.14" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad8)" />
+  <g filter="url(#shadow8)">
+    <!-- Wallet Main Fold -->
+    <rect x="110" y="140" width="180" height="130" rx="14" fill="#945D3B" stroke="#78482A" stroke-width="2" />
+    <!-- Leather Texture Flap -->
+    <path d="M110 140 L290 140 L290 205 C290 220 250 235 200 235 C150 235 110 220 110 205 Z" fill="#A86E48" stroke="#78482A" stroke-width="2" />
+    <!-- Fine Stitching around Flap -->
+    <path d="M115 145 L285 145 L285 202 C285 214 248 228 200 228 C152 228 115 214 115 202 Z" fill="none" stroke="#DFB98A" stroke-width="1.5" stroke-dasharray="4,2" />
+    <!-- Brass Snap Button -->
+    <circle cx="200" cy="205" r="7" fill="#E6C265" stroke="#B89230" stroke-width="1.5" />
+    <circle cx="200" cy="205" r="3" fill="#D1AB43" />
+    <!-- Side fold depth -->
+    <path d="M290 160 L298 175 L290 190" fill="none" stroke="#683C21" stroke-width="2" />
+  </g>
+</svg>

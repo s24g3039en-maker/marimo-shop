@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marimo Shop (マリモショップ) | 心地よい暮らしの衣服と雑貨</title>
+  <meta name="description" content="Marimo Shopは、オーガニックな衣服と温かみのある生活雑貨をお届けするオンラインショップです。初心者の方でも安心・簡単にお買い物いただけます。">
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%232D5A46'/><circle cx='40' cy='40' r='12' fill='%2370B090'/><circle cx='62' cy='58' r='16' fill='%23488265'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- トップお知らせバー -->
+  <div class="top-notice-bar">
+    <span>🌿</span>
+    <span>ただいま全品5,000円（税込）以上のお買い上げで<strong>全国送料無料</strong>キャンペーン中！</span>
+  </div>
+
+  <!-- サイトヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- ブランドロゴ -->
+      <a href="index.html" class="brand" aria-label="Marimo Shop ホーム">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <span class="brand-name">Marimo Shop</span>
+          <span class="brand-sub">NATURAL &amp; LIVING</span>
+        </div>
+      </a>
+
+      <!-- PC用検索バー -->
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="商品名やキーワードで検索..." aria-label="商品を検索">
+      </div>
+
+      <!-- ヘッダー右側アクション -->
+      <div class="header-actions">
+        <button id="cartBtn" class="cart-button" aria-label="ショッピングカートを開く">
+          <span>🛒</span>
+          <span>カート</span>
+          <span id="cartBadge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローバナー -->
+  <section class="hero-banner">
+    <div class="container hero-content">
+      <div class="hero-text-area">
+        <span class="hero-tag">2026 NEW COLLECTION</span>
+        <h1 class="hero-title">日々の暮らしに、<br>心地よい彩りと温もりを。</h1>
+        <p class="hero-description">
+          天然リネンや上質コットンの衣服、職人の手仕事が息づく生活雑貨を取り揃えました。<br>
+          使い込むほどに愛着が深まる、特別なお気に入りを見つけてみませんか。
+        </p>
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            <span>✨</span> 厳選されたナチュラル素材
+          </div>
+          <div class="hero-feature-item">
+            <span>📦</span> 5,000円以上で送料無料
+          </div>
+          <div class="hero-feature-item">
+            <span>🎁</span> ギフトにも喜ばれる丁寧な梱包
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-badge-art">
+        <div class="hero-badge-circle">
+          <span style="font-size: 2.2rem; margin-bottom: 6px;">🍃</span>
+          <strong style="color: var(--color-primary); font-size: 1.05rem;">Marimo Quality</strong>
+          <span style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 4px;">地球にも人にもやさしい<br>暮らしの道具たち</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メインコンテンツ領域 -->
+  <main class="shop-section">
+    <div class="container">
+
+      <!-- モバイル用検索バー -->
+      <div class="mobile-search-box" style="display: none;">
+        <input type="text" id="mobileSearchInput" class="search-input" placeholder="商品名やキーワードで検索...">
+      </div>
+
+      <!-- コントロールバー（カテゴリータブ・ソート・件数） -->
+      <div class="controls-bar">
+        <!-- カテゴリータブ -->
+        <nav class="category-tabs" aria-label="商品カテゴリー">
+          <button class="tab-btn active" data-category="all">
+            <span>✨</span> すべて
+          </button>
+          <button class="tab-btn" data-category="apparel">
+            <span>👔</span> 衣服
+          </button>
+          <button class="tab-btn" data-category="tops">
+            <span>👕</span> トップス
+          </button>
+          <button class="tab-btn" data-category="bottoms">
+            <span>👖</span> ボトムス
+          </button>
+          <button class="tab-btn" data-category="outer">
+            <span>🧥</span> アウター
+          </button>
+          <button class="tab-btn" data-category="goods">
+            <span>☕</span> 生活雑貨
+          </button>
+          <button class="tab-btn" data-category="accessory">
+            <span>💍</span> アクセサリー
+          </button>
+        </nav>
+
+        <!-- 件数表示と並び替え -->
+        <div class="filter-sort-row">
+          <div id="productsCount" class="products-count">
+            該当商品: <strong>12</strong> 件
+          </div>
+          <div class="sort-group">
+            <label for="sortSelect" class="sort-label">並び替え:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="recommended">おすすめ順</option>
+              <option value="price-low">価格が安い順</option>
+              <option value="price-high">価格が高い順</option>
+              <option value="rating">レビュー評価順</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商品一覧グリッド -->
+      <section id="productsGrid" class="products-grid" aria-label="商品一覧">
+        <!-- JavaScriptで動的生成されます -->
+      </section>
+
+    </div>
+  </main>
+
+  <!-- カート スライドインドロワー -->
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="ショッピングカート">
+    <div class="drawer-header">
+      <h2 class="drawer-title">
+        <span>🛒</span>
+        <span>ショッピングカート</span>
+      </h2>
+      <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="カートを閉じる">✕</button>
+    </div>
+
+    <!-- 送料無料メーター -->
+    <div class="shipping-alert">
+      <div id="shippingAlertText">あと <strong>¥5,000</strong> で<strong>送料無料</strong>になります</div>
+      <div class="shipping-bar-bg">
+        <div id="shippingBarFill" class="shipping-bar-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- カート内商品一覧 -->
+    <div id="cartItemsList" class="cart-items-list">
+      <!-- JavaScriptで動的描画 -->
+    </div>
+
+    <!-- カートが空のときの表示 -->
+    <div id="cartEmptyView" class="cart-empty" style="display: none;">
+      <div class="cart-empty-icon">🍃</div>
+      <p class="cart-empty-text">カートに商品が入っていません</p>
+      <p class="cart-empty-sub">お気に入りのアイテムをカートに追加してみましょう。</p>
+    </div>
+
+    <!-- ドロワーフッター (小計・合計・購入ボタン) -->
+    <div class="drawer-footer">
+      <div class="price-row">
+        <span>小計 (税込)</span>
+        <strong id="cartSubtotal">¥0</strong>
+      </div>
+      <div class="price-row">
+        <span>送料</span>
+        <span id="cartShipping">無料</span>
+      </div>
+      <div class="total-price-row">
+        <span class="total-label">合計金額</span>
+        <span id="cartTotal" class="total-amount">¥0</span>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn">
+        <span>ご注文手続きへ進む</span>
+        <span>➔</span>
+      </button>
+      <button id="cartClearBtn" class="cart-clear-btn">カートを空にする</button>
+    </div>
+  </aside>
+
+  <!-- 購入手続きモーダル -->
+  <div id="checkoutModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="checkoutTitle" class="modal-title">
+          <span>📝</span> ご注文手続き
+        </h2>
+        <button id="checkoutCloseBtn" class="modal-close-btn" aria-label="閉じる">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="checkoutForm">
+
+          <!-- 注文サマリー表示 -->
+          <div class="form-section">
+            <h3 class="form-section-title"><span>🛍️</span> ご注文内容の確認</h3>
+            <div class="order-summary-box">
+              <div id="summaryItemsContainer" class="summary-items">
+                <!-- 動的生成 -->
+              </div>
+              <div class="price-row" style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--color-border);">
+                <span>小計:</span>
+                <span id="checkoutSubtotal">¥0</span>
+              </div>
+              <div class="price-row">
+                <span>送料:</span>
+                <span id="checkoutShipping">¥0</span>
+              </div>
+              <div class="price-row" style="font-weight: 800; font-size: 1.1rem; color: var(--color-primary); margin-top: 6px;">
+                <span>お支払い合計:</span>
+                <span id="checkoutTotal">¥0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- お届け先情報 -->
+          <div class="form-section">
+            <h3 class="form-section-title"><span>📍</span> お届け先情報</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="userName">お名前 <span class="req-badge">必須</span></label>
+                <input type="text" id="userName" name="userName" class="form-input" placeholder="例: 山田 花子" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="userPhone">お電話番号 <span class="req-badge">必須</span></label>
+                <input type="tel" id="userPhone" name="userPhone" class="form-input" placeholder="例: 090-1234-5678" required>
+              </div>
+              <div class="form-group form-group-full">
+                <label class="form-label" for="userEmail">メールアドレス <span class="req-badge">必須</span></label>
+                <input type="email" id="userEmail" name="userEmail" class="form-input" placeholder="例: sample@marimoshop.jp" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="userZip">郵便番号 <span class="req-badge">必須</span></label>
+                <input type="text" id="userZip" name="userZip" class="form-input" placeholder="例: 150-0001" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deliveryTime">お届け希望時間帯 <span class="opt-badge">任意</span></label>
+                <select id="deliveryTime" name="deliveryTime" class="form-select">
+                  <option value="any">指定なし（最短でお届け）</option>
+                  <option value="morning">午前中 (8:00〜12:00)</option>
+                  <option value="afternoon">14:00〜16:00</option>
+                  <option value="evening">18:00〜20:00</option>
+                  <option value="night">19:00〜21:00</option>
+                </select>
+              </div>
+              <div class="form-group form-group-full">
+                <label class="form-label" for="userAddress">ご住所 <span class="req-badge">必須</span></label>
+                <input type="text" id="userAddress" name="userAddress" class="form-input" placeholder="例: 東京都渋谷区神宮前1-2-3 まりもビル4F" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- お支払い方法 -->
+          <div class="form-section">
+            <h3 class="form-section-title"><span>💳</span> お支払い方法</h3>
+            <div class="payment-options">
+              <label class="payment-radio-label">
+                <input type="radio" name="paymentMethod" value="credit" checked>
+                <span>💳 クレジットカード</span>
+              </label>
+              <label class="payment-radio-label">
+                <input type="radio" name="paymentMethod" value="convenience">
+                <span>🏪 コンビニ決済</span>
+              </label>
+              <label class="payment-radio-label">
+                <input type="radio" name="paymentMethod" value="cod">
+                <span>📦 代金引換</span>
+              </label>
+              <label class="payment-radio-label">
+                <input type="radio" name="paymentMethod" value="bank">
+                <span>🏦 銀行振込</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 注文確定ボタン -->
+          <button type="submit" class="submit-order-btn">
+            <span>✨ この内容で注文を確定する</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注文完了 (サンクス) モーダル -->
+  <div id="completeModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="completeTitle">
+    <div class="modal-card">
+      <div class="modal-body complete-content">
+        <div class="complete-icon">✓</div>
+        <h2 id="completeTitle" class="complete-title">ご注文ありがとうございます！</h2>
+        <p class="complete-desc">
+          ご注文のお手続きが正常に完了いたしました。<br>
+          ご登録いただいたメールアドレスへ注文確認メールをお送りしました。
+        </p>
+
+        <!-- 注文詳細カード -->
+        <div class="order-detail-card">
+          <div class="order-info-row">
+            <span class="order-info-label">ご注文番号</span>
+            <span id="completeOrderNumber" class="order-info-value" style="color: var(--color-primary); font-family: monospace; font-size: 1.05rem;">-</span>
+          </div>
+          <div class="order-info-row">
+            <span class="order-info-label">ご注文日時</span>
+            <span id="completeOrderDate" class="order-info-value">-</span>
+          </div>
+          <div class="order-info-row">
+            <span class="order-info-label">ご注文者様</span>
+            <span id="completeOrderName" class="order-info-value">-</span>
+          </div>
+          <div class="order-info-row">
+            <span class="order-info-label">お届け先</span>
+            <span id="completeOrderAddress" class="order-info-value">-</span>
+          </div>
+          <div class="order-info-row">
+            <span class="order-info-label">お支払い方法</span>
+            <span id="completeOrderPayment" class="order-info-value">-</span>
+          </div>
+          <div class="order-info-row" style="font-size: 1.05rem; padding-top: 10px;">
+            <span class="order-info-label">合計金額</span>
+            <span id="completeOrderTotal" class="order-info-value" style="color: var(--color-primary); font-weight: 800;">-</span>
+          </div>
+        </div>
+
+        <button id="backToShopBtn" class="back-to-shop-btn">
+          <span>🏠</span> お買い物を続ける
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- トースト通知コンテナ -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- サイトフッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">🌱 Marimo Shop</div>
+          <p class="footer-desc">
+            毎日をちょっと心地よく、ちょっと特別にする衣服と生活雑貨。<br>
+            自然素材の持つぬくもりと、ずっと寄り添えるデザインをお届けします。
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">カテゴリー</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="event.preventDefault(); document.querySelector('[data-category=tops]').click();">トップス</a></li>
+            <li><a href="#" onclick="event.preventDefault(); document.querySelector('[data-category=bottoms]').click();">ボトムス</a></li>
+            <li><a href="#" onclick="event.preventDefault(); document.querySelector('[data-category=outer]').click();">アウター</a></li>
+            <li><a href="#" onclick="event.preventDefault(); document.querySelector('[data-category=goods]').click();">生活雑貨</a></li>
+            <li><a href="#" onclick="event.preventDefault(); document.querySelector('[data-category=accessory]').click();">アクセサリー</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">ショッピングガイド</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="event.preventDefault(); alert('5,000円(税込)以上のお買い上げで全国送料無料です。');">送料・お届けについて</a></li>
+            <li><a href="#" onclick="event.preventDefault(); alert('クレジットカード、コンビニ決済、代金引換、銀行振込に対応しています。');">お支払い方法</a></li>
+            <li><a href="#" onclick="event.preventDefault(); alert('商品到着後7日以内のお問い合わせで返品・交換を承ります。');">返品・交換について</a></li>
+            <li><a href="#" onclick="event.preventDefault(); alert('Marimo Shop サポートデスク: support@marimoshop.jp');">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">店舗案内</h4>
+          <p class="footer-shop-info">
+            〒150-0001<br>
+            東京都渋谷区神宮前 1-2-3<br>
+            営業時間: 11:00 - 19:00 (水曜定休)<br>
+            電話: 03-1234-5678
+          </p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Marimo Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ用固定ボトムバー -->
+  <nav class="mobile-bottom-bar" aria-label="モバイルナビゲーション">
+    <a href="#" class="mobile-nav-item active" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">
+      <span class="mobile-nav-icon">🏠</span>
+      <span>ホーム</span>
+    </a>
+    <a href="#" class="mobile-nav-item" onclick="event.preventDefault(); document.getElementById('productsGrid').scrollIntoView({behavior:'smooth'});">
+      <span class="mobile-nav-icon">🍃</span>
+      <span>商品一覧</span>
+    </a>
+    <button id="mobileCartBtn" class="mobile-nav-item" style="border:none; background:none; cursor:pointer;">
+      <span class="mobile-nav-icon">🛒</span>
+      <span>カート</span>
+      <span id="mobileCartBadge" class="mobile-cart-badge">0</span>
+    </button>
+  </nav>
+
+  <!-- JavaScript読み込み -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

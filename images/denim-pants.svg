@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F9FB" />
+      <stop offset="100%" stop-color="#E8EEF5" />
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1E3246" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad2)" />
+  <g filter="url(#shadow2)">
+    <!-- Waistband -->
+    <path d="M140 90 L260 90 L255 120 L145 120 Z" fill="#3D5A80" stroke="#293241" stroke-width="1.5" />
+    <circle cx="200" cy="105" r="4" fill="#D4AF37" />
+    <line x1="160" y1="90" x2="160" y2="120" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="3,2" />
+    <line x1="240" y1="90" x2="240" y2="120" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="3,2" />
+    <!-- Legs -->
+    <path d="M145 120 L135 320 C135 325 175 325 175 320 L195 190 L205 190 L225 320 C225 325 265 325 265 320 L255 120 Z" fill="#4B6B94" stroke="#2B3A4E" stroke-width="2" />
+    <!-- Stitching & Details -->
+    <path d="M200 120 L200 170 C195 180 185 185 180 185" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="4,2" />
+    <path d="M150 135 C165 140 175 160 175 160" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="3,2" />
+    <path d="M250 135 C235 140 225 160 225 160" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="3,2" />
+    <!-- Cuffs roll -->
+    <path d="M135 305 L175 305 L175 320 L135 320 Z" fill="#6B8CAE" stroke="#3D5A80" stroke-width="1" />
+    <path d="M225 305 L265 305 L265 320 L225 320 Z" fill="#6B8CAE" stroke="#3D5A80" stroke-width="1" />
+  </g>
+</svg>

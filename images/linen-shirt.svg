@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4F7F4" />
+      <stop offset="100%" stop-color="#E5ECE5" />
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2D4A3E" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad1)" />
+  <g filter="url(#shadow1)">
+    <!-- Hanger -->
+    <path d="M200 95 C190 70 210 55 200 45 C195 40 185 45 185 55" fill="none" stroke="#A3876A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M140 120 L200 95 L260 120" fill="none" stroke="#B89B7E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Shirt Body -->
+    <path d="M145 118 L100 160 L125 185 L150 165 L150 310 C150 315 155 320 160 320 L240 320 C245 320 250 315 250 310 L250 165 L275 185 L300 160 L255 118 C240 135 220 142 200 142 C180 142 160 135 145 118 Z" fill="#FDFBF7" stroke="#E2DCD5" stroke-width="2" />
+    
+    <!-- Collar -->
+    <path d="M175 120 L200 155 L180 165 L165 130 Z" fill="#FFFFFF" stroke="#D3CBC2" stroke-width="1.5" />
+    <path d="M225 120 L200 155 L220 165 L235 130 Z" fill="#FFFFFF" stroke="#D3CBC2" stroke-width="1.5" />
+    
+    <!-- Placket & Buttons -->
+    <line x1="200" y1="155" x2="200" y2="320" stroke="#E6E0D8" stroke-width="2" />
+    <circle cx="200" cy="180" r="3.5" fill="#C4B5A5" />
+    <circle cx="200" cy="215" r="3.5" fill="#C4B5A5" />
+    <circle cx="200" cy="250" r="3.5" fill="#C4B5A5" />
+    <circle cx="200" cy="285" r="3.5" fill="#C4B5A5" />
+    
+    <!-- Pocket -->
+    <path d="M165 190 L185 190 L185 220 C185 223 175 228 175 228 C175 228 165 223 165 220 Z" fill="none" stroke="#DDD7CE" stroke-width="1.5" />
+    <!-- Fold Texture Line -->
+    <path d="M170 260 Q180 270 190 260" fill="none" stroke="#EEE8E0" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

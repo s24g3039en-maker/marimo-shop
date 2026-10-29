@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF9F5" />
+      <stop offset="100%" stop-color="#F2ECE4" />
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#5C4D3C" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad3)" />
+  <g filter="url(#shadow3)">
+    <!-- Knit Body -->
+    <path d="M140 110 L80 170 L105 195 L145 165 L145 305 C145 310 150 315 155 315 L245 315 C250 315 255 310 255 305 L255 165 L295 195 L320 170 L260 110 C240 125 220 130 200 130 C180 130 160 125 140 110 Z" fill="#C9ADA7" stroke="#A68A83" stroke-width="2" />
+    <!-- Ribbed Collar -->
+    <ellipse cx="200" cy="115" rx="35" ry="12" fill="#B3928B" stroke="#8E6E67" stroke-width="1.5" />
+    <!-- Cable knit patterns -->
+    <path d="M185 145 C180 160 190 175 185 190 C180 205 190 220 185 235 C180 250 190 265 185 280 C180 295 185 305 185 305" fill="none" stroke="#B3928B" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M215 145 C220 160 210 175 215 190 C220 205 210 220 215 235 C220 250 210 265 215 280 C220 295 215 305 215 305" fill="none" stroke="#B3928B" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Ribbed Hem & Cuffs -->
+    <line x1="145" y1="305" x2="255" y2="305" stroke="#9A7B74" stroke-width="4" stroke-linecap="round" />
+    <line x1="85" y1="175" x2="102" y2="192" stroke="#9A7B74" stroke-width="4" stroke-linecap="round" />
+    <line x1="315" y1="175" x2="298" y2="192" stroke="#9A7B74" stroke-width="4" stroke-linecap="round" />
+  </g>
+</svg>

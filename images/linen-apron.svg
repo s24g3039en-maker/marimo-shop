@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAF7" />
+      <stop offset="100%" stop-color="#ECF2EB" />
+    </linearGradient>
+    <filter id="shadow9" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2D4A3E" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad9)" />
+  <g filter="url(#shadow9)">
+    <!-- Neck Strap -->
+    <path d="M175 105 C175 60 225 60 225 105" fill="none" stroke="#486856" stroke-width="4" stroke-linecap="round" />
+    <!-- Waist Straps -->
+    <path d="M130 195 L95 210" fill="none" stroke="#486856" stroke-width="4" stroke-linecap="round" />
+    <path d="M270 195 L305 210" fill="none" stroke="#486856" stroke-width="4" stroke-linecap="round" />
+    <!-- Apron Bib & Skirt -->
+    <path d="M165 105 L235 105 L235 150 L270 185 L265 330 L135 330 L130 185 L165 150 Z" fill="#587E69" stroke="#3D5A4A" stroke-width="2" />
+    <!-- Large Front Pockets -->
+    <rect x="160" y="235" width="80" height="60" rx="4" fill="#4B6E5B" stroke="#375242" stroke-width="1.5" />
+    <line x1="200" y1="235" x2="200" y2="295" stroke="#688F7A" stroke-width="1.5" stroke-dasharray="3,2" />
+    <!-- Contrast Stitching on Hem -->
+    <line x1="140" y1="322" x2="260" y2="322" stroke="#7FA591" stroke-width="1.5" stroke-dasharray="4,2" />
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAF8" />
+      <stop offset="100%" stop-color="#EAF0EA" />
+    </linearGradient>
+    <filter id="shadow6" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2D4A3E" flood-opacity="0.14" />
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bgGrad6)" />
+  <g filter="url(#shadow6)">
+    <!-- Mug Handle -->
+    <path d="M245 160 C290 160 295 240 245 250" fill="none" stroke="#C49B74" stroke-width="14" stroke-linecap="round" />
+    <!-- Mug Body -->
+    <path d="M135 130 L145 280 C146 295 165 305 200 305 C235 305 254 295 255 280 L265 130 Z" fill="#EFE5D8" stroke="#D3C3B1" stroke-width="2" />
+    <!-- Glaze Top Accent -->
+    <path d="M135 130 C150 145 165 135 180 148 C195 155 210 142 225 150 C240 155 255 140 265 130 L265 170 C250 185 240 175 225 180 C210 185 195 170 180 182 C165 190 150 178 135 170 Z" fill="#406A56" />
+    <!-- Rim opening -->
+    <ellipse cx="200" cy="130" rx="65" ry="16" fill="#365848" stroke="#284437" stroke-width="2" />
+    <ellipse cx="200" cy="133" rx="58" ry="12" fill="#5A3D28" />
+    <!-- Steam -->
+    <path d="M185 95 Q175 80 185 65" fill="none" stroke="#C4B8AB" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M205 98 Q215 80 205 60" fill="none" stroke="#C4B8AB" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>
