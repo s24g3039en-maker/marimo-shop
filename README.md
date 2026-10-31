@@ -105,7 +105,6 @@
 ├── REPORT.md               # 課題提出用 A4一枚説明資料 (Markdown版)
 ├── report.html             # 課題提出用 A4一枚説明資料 (HTML/印刷プレビュー対応版)
 ├── README.md               # 本ドキュメント
-└── container-practice.txt  # 初期既存ファイル
 ```
 
 ---
