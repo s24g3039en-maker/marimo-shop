@@ -1,0 +1,29 @@
+# Python キャッシュファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS生成の一時ファイル
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# エディタ・IDE設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ログファイル
+*.log
+
+# 演習用一時ファイル
+container-practice.txt
+
+# 環境変数・秘密情報（将来追加された場合の安全対策）
+.env
+.env.local
